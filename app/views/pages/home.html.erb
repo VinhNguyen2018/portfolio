@@ -1,7 +1,29 @@
 <div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.6) 50%), url(<%= image_path("halong.jpg")%>);">
   <div class="banner-content">
     <h2>FRANCOIS NGUYEN</h2>
-    <h6>Freshly web developer</h6>
-    <a class="btn btn-primary">About me</a>
+    <h6>Freshly new web developer</h6>
+    <a href="/#about-me" class="btn btn-primary">About me</a>
+  </div>
+</div>
+
+<div class="container">
+  <div id="about-me">
+    <h1>About me</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore laborum quibusdam cupiditate, ea harum doloremque cum debitis doloribus rem nulla suscipit excepturi libero provident rerum facilis ipsa quasi iure placeat?</p>
+  </div>
+
+  <div id="projects">
+    <h1>Projects</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore laborum quibusdam cupiditate, ea harum doloremque cum debitis doloribus rem nulla suscipit excepturi libero provident rerum facilis ipsa quasi iure placeat?</p>
+  </div>
+
+  <div id="contact">
+    <h1>Contact</h1>
+      <%= simple_form_for @user do |f| %>
+        <%= f.input :name %>
+        <%= f.input :email %>
+        <%= f.input :message %>
+        <%= f.button :submit %>
+      <% end %>
   </div>
 </div>
