@@ -4,8 +4,8 @@ class MessagesController < ApplicationController
   end
 
   def create
-    @message = Message.new params[:message]
-    if @contact.valid?
+    @message = Message.new(message_params)
+    if @message.valid?
       Mailer.contact_form(@message).deliver # Je vais expliquer cette ligne juste apres...
       redirect_to root_path, flash: { success: t(:"create.message_has_been_sent") }
     else

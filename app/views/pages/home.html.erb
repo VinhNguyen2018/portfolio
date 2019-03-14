@@ -19,6 +19,12 @@
 
   <div id="contact">
     <h1>Contact</h1>
-
+      <%= simple_form_for(message_index_path) do |f| %>
+        <%= f.input :name,label:false,placeholder: 'Name' %>
+        <%= f.input :email,label:false,placeholder: 'Email' %>
+        <%= f.input :message,label:false,placeholder: 'Type your message', class: 'test' %>
+        <%= f.button :submit,'Send message', class: 'btn btn-primary' %>
+      <% end %>
+    </div>
   </div>
 </div>
