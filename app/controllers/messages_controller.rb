@@ -4,13 +4,11 @@ class MessagesController < ApplicationController
   end
 
   def create
-    @message = Message.new message_params
-    if @message.valid?
-      MessageMailer.contact(@message).deliver_now
-      redirect_to new_message_url
-      flash[:notice] = "Your message reached me! I look forward to read you and reply (quickly I hope)"
+    @message = Message.new params[:message]
+    if @contact.valid?
+      Mailer.contact_form(@message).deliver # Je vais expliquer cette ligne juste apres...
+      redirect_to root_path, flash: { success: t(:"create.message_has_been_sent") }
     else
-      flash[:notice] = "There was an error sending your message. Please try again."
       render :new
     end
   end
