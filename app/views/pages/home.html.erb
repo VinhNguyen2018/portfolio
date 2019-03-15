@@ -48,8 +48,7 @@
 
   <div id="contact">
     <h1>Contact</h1>
-    <p><%= root_path %></p>
-    <%= simple_form_for(@message, method: :post, url: message_index_url ) do |f| %>
+    <%= simple_form_for(@message) do |f| %>
       <%= f.input :firstname,label:false,placeholder: 'First Name' %>
       <%= f.input :lastname,label:false,placeholder: 'Last Name' %>
       <%= f.input :email,label:false,placeholder: 'Email' %>
