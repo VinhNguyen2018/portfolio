@@ -23,24 +23,24 @@
     <div class="section">
       <h1>Projects</h1>
       <div class="card-product">
-        <img src=<%= image_path("work-in-progress.jpg")%>>
+        <a href="https://github.com/VinhNguyen2018/autobot"><img src=<%= image_path("work-in-progress.jpg")%>></a>
         <div class="card-product-infos">
           <h2>Autobot</h2>
-          <p>Product description with <strong>relevant info</strong> only.</p>
+          <p>I am currently working with a friend of mine to <strong>automatize</strong> his business flows by implementing a bot that will do some scrapping and updating values on marketplaces. Come back later to see a awesome video of it! Will it be Autobots or Decepticons ?!</p>
         </div>
       </div>
       <div class="card-product">
-        <img src=<%= image_path("work-in-progress.jpg")%>>
+        <a href="https://github.com/VinhNguyen2018/Homebank-Management-Tool"><img src=<%= image_path("work-in-progress.jpg")%>></a>
         <div class="card-product-infos">
-          <h2>Homebank tool management</h2>
-          <p>Product description with <strong>relevant info</strong> only.</p>
+          <h2>Homebank management tool</h2>
+          <p>This phrase sums me so well : <strong>the shoemaker's son always goes barefoot</strong> As this is my situation in finance/accounting (same as my brother) when we want to do our own household accounting! So I am working with him to create a quick and efficient app that will help us reduce our spendings!</p>
         </div>
       </div>
       <div class="card-product">
-        <img src=<%= image_path("reecover.jpg")%>>
+        <a href="https://www.reecover.fr/"><img src=<%= image_path("reecover2.jpg")%>></a>
         <div class="card-product-infos">
           <h2>Reecover</h2>
-          <p>Product description with <strong>relevant info</strong> only.</p>
+          <p>During my last two weeks of my bootcamp at <strong>Le Wagon</strong>, I worked on a project that help <strong>professional athletes career change </strong> when their sport vocation ended prematurely.</p>
         </div>
       </div>
     </div>
@@ -48,8 +48,10 @@
 
   <div id="contact">
     <h1>Contact</h1>
-    <%= simple_form_for(message_index_path) do |f| %>
-      <%= f.input :name,label:false,placeholder: 'Name' %>
+    <p><%= root_path %></p>
+    <%= simple_form_for(@message, method: :post, url: message_index_url ) do |f| %>
+      <%= f.input :firstname,label:false,placeholder: 'First Name' %>
+      <%= f.input :lastname,label:false,placeholder: 'Last Name' %>
       <%= f.input :email,label:false,placeholder: 'Email' %>
       <%= f.input :message,label:false,placeholder: 'Type your message', class: 'test' %>
       <%= f.button :submit,'Send message', class: 'btn btn-primary' %>
