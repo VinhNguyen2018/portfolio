@@ -8,23 +8,51 @@
 
 <div class="container">
   <div id="about-me">
-    <h1>About me</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore laborum quibusdam cupiditate, ea harum doloremque cum debitis doloribus rem nulla suscipit excepturi libero provident rerum facilis ipsa quasi iure placeat?</p>
+    <div class="section">
+      <h1>About me</h1>
+      <p>Hi guys, my name is François NGUYEN. <br>
+      Former accountant, I got bored of seeing the same Excel Spredsheet over and over again... <br>
+      I took the opportunity to switch my career and decided to do cool stuff over the internet !<br>
+      I just finished the Le Wagon bootcamp in Paris batch #220 and as short and fun it was, <br>
+      I want to pursue in this career of web dev !
+      </p>
+    </div>
   </div>
 
   <div id="projects">
-    <h1>Projects</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore laborum quibusdam cupiditate, ea harum doloremque cum debitis doloribus rem nulla suscipit excepturi libero provident rerum facilis ipsa quasi iure placeat?</p>
+    <div class="section">
+      <h1>Projects</h1>
+      <div class="card-product">
+        <img src=<%= image_path("work-in-progress.jpg")%>>
+        <div class="card-product-infos">
+          <h2>Autobot</h2>
+          <p>Product description with <strong>relevant info</strong> only.</p>
+        </div>
+      </div>
+      <div class="card-product">
+        <img src=<%= image_path("work-in-progress.jpg")%>>
+        <div class="card-product-infos">
+          <h2>Homebank tool management</h2>
+          <p>Product description with <strong>relevant info</strong> only.</p>
+        </div>
+      </div>
+      <div class="card-product">
+        <img src=<%= image_path("reecover.jpg")%>>
+        <div class="card-product-infos">
+          <h2>Reecover</h2>
+          <p>Product description with <strong>relevant info</strong> only.</p>
+        </div>
+      </div>
+    </div>
   </div>
 
   <div id="contact">
     <h1>Contact</h1>
-      <%= simple_form_for(message_index_path) do |f| %>
-        <%= f.input :name,label:false,placeholder: 'Name' %>
-        <%= f.input :email,label:false,placeholder: 'Email' %>
-        <%= f.input :message,label:false,placeholder: 'Type your message', class: 'test' %>
-        <%= f.button :submit,'Send message', class: 'btn btn-primary' %>
-      <% end %>
-    </div>
+    <%= simple_form_for(message_index_path) do |f| %>
+      <%= f.input :name,label:false,placeholder: 'Name' %>
+      <%= f.input :email,label:false,placeholder: 'Email' %>
+      <%= f.input :message,label:false,placeholder: 'Type your message', class: 'test' %>
+      <%= f.button :submit,'Send message', class: 'btn btn-primary' %>
+    <% end %>
   </div>
 </div>
