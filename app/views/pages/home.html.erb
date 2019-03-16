@@ -48,12 +48,12 @@
 
   <div id="contact">
     <h1>Contact</h1>
-    <%= simple_form_for(@message) do |f| %>
-      <%= f.input :firstname,label:false,placeholder: 'First Name' %>
-      <%= f.input :lastname,label:false,placeholder: 'Last Name' %>
-      <%= f.input :email,label:false,placeholder: 'Email' %>
-      <%= f.input :message,label:false,placeholder: 'Type your message', class: 'test' %>
-      <%= f.button :submit,'Send message', class: 'btn btn-primary' %>
-    <% end %>
+      <form action="http://formspree.io/francois.nguyen2@gmail.com" method="post" id="contact-form">
+        <input type="text" name="firstname" placeholder="First name" id="first-name">
+        <input type="text" name="lastname" placeholder="Last name" id="last-name">
+        <input type="email" name="_replyto" placeholder="Email" id="email">
+        <textarea name="body" placeholder="Your message" id="message"></textarea>
+        <input type="submit" value="Send message" class="btn-flat">
+      </form>
   </div>
 </div>
