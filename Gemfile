@@ -7,8 +7,7 @@ gem 'pg', '~> 0.21'
 gem 'puma'
 gem 'rails', '5.2.2.1'
 gem 'redis'
-gem "figaro"
-gem 'mailgun-ruby', '~>1.1.6'
+gem 'sendgrid-ruby'
 
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass', '~> 5.6.1'
