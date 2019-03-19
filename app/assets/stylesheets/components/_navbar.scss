@@ -30,3 +30,26 @@
   color:white;
   padding-top:20px;
 }
+
+
+
+@media (max-width: 575px) {
+
+.nav-item-avatar{
+  display: none;
+}
+
+.nav-item {
+  background-color: rgba(50, 50, 50,0.8)
+}
+
+.navbar-toggler {
+    border: none;
+    margin-bottom: 5px;
+}
+
+.lightgrey {
+  color:lightgrey;
+}
+
+}
