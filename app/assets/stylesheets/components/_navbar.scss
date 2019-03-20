@@ -6,6 +6,15 @@
   width:100%;
 }
 
+.fixed{
+  position: fixed;
+  top:0;
+  z-index:1000;
+  background-color: rgba(59,71,90, 0.85);
+  height:55px;
+  transition-duration: 3s;
+}
+
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
 }
