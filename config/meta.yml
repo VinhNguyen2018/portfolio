@@ -1,0 +1,5 @@
+meta_product_name: "François NGUYEN"
+meta_title: "François NGUYEN - Fullstack Web Developper on Ruby on rails"
+meta_description: "Former Accountant and freshly graduates from Le Wagon, now creating awesome and beautiful App/websites !"
+meta_image: "homepage-reecover-og-image-1200x630.png" # should exist in `app/assets/images/`
+# twitter_account: "@product_twitter_account"   # required for Twitter Cards
